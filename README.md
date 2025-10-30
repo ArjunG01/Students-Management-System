@@ -81,6 +81,61 @@ It supports multiple **user roles** such as **Admin**, **Teacher**, and **Studen
    ```bash
    git clone https://github.com/ArjunG01/Students-Management-System.git
 
+ ---
+
+ 🗂️ Project Structure
+StudentManagementSystem/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/StudentsManagementSystem/
+│   │   │       ├── config/
+│   │   │       │   └── SecurityConfig.java
+│   │   │       ├── controller/
+│   │   │       │   ├── HomeController.java
+│   │   │       │   └── LoginController.java
+│   │   │       ├── entity/
+│   │   │       │   ├── Student.java
+│   │   │       │   └── User.java
+│   │   │       ├── repository/
+│   │   │       │   ├── StudentRepository.java
+│   │   │       │   └── UserRepository.java
+│   │   │       ├── service/
+│   │   │       │   ├── CustomUserDetailsService.java
+│   │   │       │   ├── StudentService.java
+│   │   │       │   └── UserService.java
+│   │   │       ├── serviceImpl/
+│   │   │       │   └── StudentsManagementSystemApplication.java
+│   │   │
+│   │   ├── resources/
+│   │   │   ├── static/
+│   │   │   │   ├── css/
+│   │   │   │   │   └── style.css
+│   │   │   │   └── js/
+│   │   │   │       └── script.js
+│   │   │   ├── templates/
+│   │   │   │   ├── create-student.html
+│   │   │   │   ├── edit-student.html
+│   │   │   │   ├── home.html
+│   │   │   │   ├── login.html
+│   │   │   │   ├── register.html
+│   │   │   │   └── students.html
+│   │   │   └── application.properties
+│   │
+│   ├── test/
+│   │   └── ...
+│
+├── target/
+│   ├── HELP.md
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   └── pom.xml
+│
+└── README.md
+
+---
+
 ## 📈 Future Enhancements
 - 📊 Add performance tracking and analytics for students  
 - ✉️ Email notifications for user registration and updates  
