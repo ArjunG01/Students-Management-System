@@ -74,7 +74,18 @@ It supports multiple **user roles** such as **Admin**, **Teacher**, and **Studen
 6. All operations interact with the **MySQL database** via **Hibernate** and **Spring Data JPA**.  
 
 ---
+screenshots 
 
+<img width="1918" height="967" alt="Login" src="https://github.com/user-attachments/assets/5b0706cc-0ad5-4e30-97ce-43540229d493" />
+<img width="1918" height="971" alt="Register" src="https://github.com/user-attachments/assets/de383ffa-6936-46d2-8d17-f30cea64754d" />
+<img width="1918" height="888" alt="Home Page" src="https://github.com/user-attachments/assets/41bcc02f-cb4c-4214-8c32-35c187c7fc36" />
+<img width="1917" height="971" alt="Students List" src="https://github.com/user-attachments/assets/01888448-5819-4c43-ab7b-b8029d2a63fd" />
+<img width="1918" height="967" alt="Add Student" src="https://github.com/user-attachments/assets/dff43eef-b033-4ef5-aa84-efdef11b3a5a" />
+<img width="1918" height="967" alt="Edit Student" src="https://github.com/user-attachments/assets/55ac135d-37d6-4713-a69a-e269367530a7" />
+<img width="1918" height="963" alt="Delete Confirmation" src="https://github.com/user-attachments/assets/bc2e6e44-f01e-47af-8d90-a9b1ba2212ef" />
+<img width="1913" height="972" alt="Logout Confirmation" src="https://github.com/user-attachments/assets/2e8facdc-3eca-4374-8abf-cb1f2f1a1bb9" />
+
+---
 ## 🧾 Setup Instructions
 
 1. Clone this repository:
