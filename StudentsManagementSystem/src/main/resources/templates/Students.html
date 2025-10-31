@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Students List</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+<style>
+body{
+    background-color:#f5f7fa;
+}
+
+/* --- Modern Navbar --- */
+.navbar-custom{
+    background:linear-gradient(90deg,#007bff,#00c6ff);
+    padding:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+.navbar-custom a{
+    color:white;
+    font-weight:bold;
+    font-size:17px;
+    margin: 0 18px;
+    text-decoration:none;
+    transition:0.3s;
+}
+.navbar-custom a:hover{
+    color:#ffe600;
+    transform: scale(1.1);
+}
+
+/* Table Styling */
+table{
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+th{
+    background:#007bff;
+    color:white;
+    text-transform: uppercase;
+    text-align:center;
+}
+td{
+    text-align:center;
+}
+h1{
+    text-align:center;
+    margin-top:25px;
+    font-weight: 700;
+    color:#007bff;
+}
+
+/* Add Button */
+.add-btn {
+    display:block;
+    width:160px;
+    margin:20px auto;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ✅ NEW NAVBAR -->
+<div class="navbar-custom text-center">
+    <a href="/home">🏠 Home</a>
+    <a href="/Students">🎓 Students</a>
+    <a href="/logout" onclick="return confirm('Are you sure you want to logout?');">🚪 Logout</a>
+
+</div>
+
+<h1>Students Management System</h1>
+
+<!-- ✅ Add Student Button -->
+<a th:href="@{/Students/new}" class="btn btn-success add-btn">+ Add Student</a>
+
+<table class="table table-bordered table-striped table-hover">
+<thead>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Department</th>
+    <th>Class Name</th> <!-- ✅ Added -->
+    <th>Email</th>
+    <th>Password</th>
+    <th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+<tr th:each="student : ${Students}">
+    <td th:text="${student.id}"></td>
+    <td th:text="${student.name}"></td>
+    <td th:text="${student.department}"></td>
+    <td th:text="${student.className}"></td> <!-- ✅ Showing Class Name -->
+    <td th:text="${student.email}"></td>
+    <td th:text="${student.password}"></td>
+
+    <td>
+        <a th:href="@{'/Students/edit/' + ${student.id}}" class="btn btn-warning btn-sm">✏ Update</a>
+
+        <a th:href="@{'/Students/delete/' + ${student.id}}" 
+           class="btn btn-danger btn-sm"
+           onclick="return confirm('Are you sure you want to delete this student?');">
+           🗑 Delete
+        </a>
+    </td>
+</tr>
+</tbody>
+
+</table>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  
+
+</body>
+</html>
